@@ -3,7 +3,7 @@
     "$oid": "66f27d950aaff5557424c9a8"
   },
   "id": "4MYAuo",
-  "name": "All the title block fields filled with appropriate information through parameters only ",
+  "name": "All the title block fields filled with appropriate information through parameters only. Field are Name, Material, Treatment, Confidentiality class, Scale, Drawn by, Compare, Replaces,Drawing Owner, Version Drwg, Finished Weight, Status, Date, Designation, Symbols ( General tolerance, Welding). ",
   "category": {
     "division": [
       "OFA"
@@ -185,7 +185,7 @@
   "createdBy": null,
   "lastUpdatedAt": "2024-11-25T10:26:13.702012",
   "optional_category": [],
-  "description": "Check blank number present in the title block",
+  "description": "Pass if blank number is present in the blanck number field of the title block",
   "verifyStatus": true,
   "logicalSteps": [
     "Open the 2D drawing in Autodesk Inventor.",
