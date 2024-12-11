@@ -3,7 +3,7 @@
     "$oid": "66f27d950aaff5557424c9a8"
   },
   "id": "4MYAuo",
-  "name": "All the title block fields filled with appropriate information through parameters only. Field are Name, Material, Treatment, Confidentiality class, Scale, Drawn by, Compare, Replaces,Drawing Owner, Version Drwg, Finished Weight, Status, Date, Designation, Symbols ( General tolerance, Welding). ",
+  "name": "All the title block fields filled with appropriate information through parameters only ",
   "category": {
     "division": [
       "OFA"
@@ -23,7 +23,7 @@
   },
   "createdAt": "2024-09-24T08:51:33.002855",
   "createdBy": null,
-  "lastUpdatedAt": "2024-11-25T10:26:12.681544",
+  "lastUpdatedAt": "2024-09-30T05:57:31.393692",
   "optional_category": [],
   "description": "Check all the title block fields filled with appropriate information through parameters only (through i-properties)​",
   "verifyStatus": true,
@@ -147,13 +147,82 @@
       "id": "result10"
     }
   ],
-  "testedFileList": [],
-  "report": {
-    "passcount": 0,
-    "failcount": 60
-  },
-  "srno": 44
+  "testedFileList": []
 }
+
+
+{
+  "_id": {
+    "$oid": "670df3ec9bccec778374c56e"
+  },
+  "id": "hN7CL3",
+  "name": "Check Autodesk Inventor Version to be used.",
+  "category": {
+    "division": [
+      "VIN"
+    ],
+    "pc": [
+      "Edwards India (IPG)"
+    ],
+    "software": [
+      "Inventor"
+    ],
+    "componentDesign": [
+      "2D Drawing"
+    ],
+    "subCategory": [
+      "Frame 2D Drawing",
+      "Piping 2D Drawing",
+      "Skid 2D Drawing"
+    ]
+  },
+  "createdAt": "2024-10-15T04:47:40.778284",
+  "createdBy": null,
+  "lastUpdatedAt": "2024-10-15T04:47:40.778284",
+  "optional": [],
+  "description": "Check version \"Autodesk Inventor Professional 2022\" is available",
+  "verifyStatus": true,
+  "logicalSteps": [
+    "Open Autodesk Inventor.",
+    "Go to the 'Help' menu.",
+    "Select 'About Autodesk Inventor'.",
+    "Check the version number displayed in the 'About' window.",
+    "Confirm if the version is 'Autodesk Inventor Professional 2022'.",
+    "Document the result of the check (Pass or Fail)."
+  ],
+  "functionList": [
+    {
+      "name": "GetDrawingDocument",
+      "params": [],
+      "id": "result0"
+    },
+    {
+      "name": "GetInventorVersion",
+      "params": [
+        "result0"
+      ],
+      "id": "result1"
+    },
+    {
+      "name": "ValidateString",
+      "params": [
+        "result1",
+        "Autodesk Inventor Professional 2022"
+      ],
+      "id": "result2"
+    },
+    {
+      "name": "CombineObjectStatus",
+      "params": [
+        "result1",
+        "result2"
+      ],
+      "id": "result3"
+    }
+  ],
+  "testedFileList": []
+}
+
 
 {
   "_id": {
@@ -183,9 +252,9 @@
   },
   "createdAt": "2024-09-19T13:34:59.216323",
   "createdBy": null,
-  "lastUpdatedAt": "2024-11-25T10:26:13.702012",
+  "lastUpdatedAt": "2024-09-28T07:17:18.030459",
   "optional_category": [],
-  "description": "Pass if blank number is present in the blanck number field of the title block",
+  "description": "Check blank number present in the title block",
   "verifyStatus": true,
   "logicalSteps": [
     "Open the 2D drawing in Autodesk Inventor.",
@@ -226,13 +295,9 @@
       "id": "result5"
     }
   ],
-  "testedFileList": [],
-  "report": {
-    "passcount": 0,
-    "failcount": 7
-  },
-  "srno": 37
+  "testedFileList": []
 }
+
 
 {
   "_id": {
@@ -259,7 +324,7 @@
   },
   "createdAt": "2024-09-27T11:04:18.471967",
   "createdBy": null,
-  "lastUpdatedAt": "2024-11-25T10:26:13.789520",
+  "lastUpdatedAt": "2024-09-27T11:04:18.471967",
   "optional_category": [],
   "description": " ORIGINAL SCALE, DRN, DATE, TECHNICAL, APPR'D, SIZE, COMPONENT(Description),\n DRAWING NUMBER, ISSUE ( Revision Number)",
   "verifyStatus": true,
@@ -325,12 +390,7 @@
       "id": "result4"
     }
   ],
-  "testedFileList": [],
-  "report": {
-    "passcount": 0,
-    "failcount": 7
-  },
-  "srno": 53
+  "testedFileList": []
 }
 
 {
@@ -358,7 +418,7 @@
   },
   "createdAt": "2024-09-19T13:14:37.641571",
   "createdBy": null,
-  "lastUpdatedAt": "2024-11-25T10:26:13.881608",
+  "lastUpdatedAt": "2024-09-19T13:14:37.641571",
   "optional_category": [],
   "description": "Check drawing owner is mentioned in title block & its correct",
   "verifyStatus": true,
@@ -408,12 +468,7 @@
       "id": "result5"
     }
   ],
-  "testedFileList": [],
-  "report": {
-    "passcount": 7,
-    "failcount": 0
-  },
-  "srno": 36
+  "testedFileList": []
 }
 
 {
@@ -441,7 +496,7 @@
   },
   "createdAt": "2024-09-19T10:23:44.860055",
   "createdBy": null,
-  "lastUpdatedAt": "2024-11-25T10:26:14.089770",
+  "lastUpdatedAt": "2024-09-19T10:23:44.860055",
   "optional_category": [],
   "description": "Sheet size is used either A3, A2 & A1 or A0​",
   "verifyStatus": true,
@@ -491,26 +546,23 @@
       "id": "result4"
     }
   ],
-  "testedFileList": [],
-  "report": {
-    "passcount": 8,
-    "failcount": 0
-  },
-  "srno": 35
+  "testedFileList": []
 }
 
 {
   "_id": {
-    "$oid": "670dfed89bccec778374c571"
+    "$oid": "670cdbcf9bccec778374c55f"
   },
-  "id": "60bQBx",
-  "name": "Ensure proper size CRP template is used and that all the title fields are filled.​",
+  "id": "7HzYR1",
+  "name": "Check the COG and weight on drawing.",
   "category": {
     "division": [
       "OFA"
     ],
     "pc": [
-      "Crepelle"
+      "PNB",
+      "UTF",
+      "APF"
     ],
     "software": [
       "Inventor"
@@ -519,175 +571,115 @@
       "2D Drawing"
     ],
     "subCategory": [
-      "GA Drawing - Standard Product"
+      "GA Drawing - Customized Units"
     ]
   },
-  "createdAt": "2024-10-15T05:34:16.044960",
+  "createdAt": "2024-10-14T08:52:31.588833",
   "createdBy": null,
-  "lastUpdatedAt": "2024-11-25T10:57:12.118927",
-  "optional": [
-    "Welded Piping"
-  ],
-  "description": "Pass Condition​:  In the model tree, under each sheet, there is indent named AC_enov20160101 (AC will confirm later).​ Required fields are having letters or numbers in the title block(specific check for number at Ed).​",
+  "lastUpdatedAt": "2024-10-14T08:52:31.588833",
+  "optional": [],
+  "description": "Net mass is mentioned in the given drawing as per AC standards​. Centre of gravity is mentioned with symbol and dimensions on any two views on the drawing​.",
   "verifyStatus": true,
   "logicalSteps": [
     "Open the 2D drawing in Autodesk Inventor.",
-    "In the Model Tree, locate each sheet in the drawing.",
-    "Under each sheet, look for an indent named 'AC_enov20160101'.",
-    "Verify that the indent 'AC_enov20160101' is present under each sheet.",
-    "Check the title block on each sheet to ensure all required fields are filled with letters or numbers.",
-    "Specifically, check for a number at the 'Ed' field in the title block.",
+    "In the Model Tree, locate the Annotations section.",
+    "Expand the Annotations section to view all the placed annotations.",
+    "Search for the 'Net Mass' annotation and verify it is mentioned as per AC standards.",
+    "Locate the views on the drawing.",
+    "Check for the Centre of Gravity (COG) symbol and its dimensions on any two views.",
+    "If both the Net Mass and COG are present and correctly annotated, confirm the check passes.",
+    "If either the Net Mass or COG is absent or incorrectly annotated, confirm the check fails.",
     "Document the result of the check (Pass or Fail)."
   ],
   "functionList": [
     {
       "name": "GetDrawingDocument",
-      "params": [],
-      "id": "result0"
+      "id": "result1"
     },
     {
       "name": "GetActiveSheet",
       "params": [
-        "result0"
-      ],
-      "id": "result1"
-    },
-    {
-      "name": "GetSketchSymbols",
-      "params": [
-        "result1",
-        [
-          "General tolerances",
-          "Welding"
-        ]
+        "result1"
       ],
       "id": "result2"
     },
     {
-      "name": "GetTextFromSketchSymbols",
+      "name": "GetSketchSymbols",
       "params": [
         "result2",
         [
-          "General tolerances",
-          "Welding"
+          "Center of gravity"
         ]
       ],
       "id": "result3"
     },
     {
-      "name": "GetRequiredIPropertiesInTitleBlock",
+      "name": "GetNames",
       "params": [
-        "result0",
-        [
-          "Name",
-          "Material",
-          "Treatment",
-          "Scale",
-          "Designer",
-          "Secrecy class",
-          "Compare",
-          "Replaces",
-          "Finished Weight",
-          "Company",
-          "Part Number",
-          "Creation date",
-          "Design Status"
-        ]
+        "result3"
       ],
       "id": "result4"
     },
     {
-      "name": "CheckListNotNull",
+      "name": "CompareListToListSubset",
       "params": [
-        "result4"
+        [
+          "Center of gravity"
+        ],
+        "result4",
+        "AND"
       ],
       "id": "result5"
     },
     {
-      "name": "VerifyItemsInList",
+      "name": "GetRequiredIPropertyInTitleBlock",
       "params": [
-        [
-          "General tolerances",
-          "Welding"
-        ],
-        "result3"
+        "result1",
+        "Finished Weight"
       ],
-      "id": "result6"
+      "id": "resultX"
+    },
+    {
+      "name": "CheckFinishWeightInTitleBlock",
+      "params": [
+        "resultX"
+      ],
+      "id": "resultW"
     },
     {
       "name": "MergeList",
       "params": [
         "result4",
-        "result3"
+        "resultX"
       ],
-      "id": "result7"
+      "id": "resultY"
     },
     {
       "name": "MergeList",
       "params": [
         "result5",
-        "result6"
+        "resultW"
       ],
-      "id": "result8"
-    },
-    {
-      "name": "GetListFromList",
-      "params": [
-        [
-          "Version Drwg",
-          "Owning Unit",
-          "Transferred from"
-        ]
-      ],
-      "id": "result9"
-    },
-    {
-      "name": "CheckTextboxesInTitleBlock",
-      "params": [
-        "result1",
-        "result9"
-      ],
-      "id": "result10"
-    },
-    {
-      "name": "MergeList",
-      "params": [
-        "result7",
-        "result9"
-      ],
-      "id": "result11"
-    },
-    {
-      "name": "MergeList",
-      "params": [
-        "result8",
-        "result10"
-      ],
-      "id": "result12"
+      "id": "resultZ"
     },
     {
       "name": "GetRuleStatus",
       "params": [
-        "result12",
+        "resultZ",
         "AND"
       ],
-      "id": "result13"
+      "id": "result6"
     },
     {
       "name": "CombineObjectStatus",
       "params": [
-        "result11",
-        "result12"
+        "resultY",
+        "resultZ"
       ],
-      "id": "result14"
+      "id": "result7"
     }
   ],
-  "testedFileList": [],
-  "report": {
-    "passcount": 0,
-    "failcount": 8
-  },
-  "srno": 95
+  "testedFileList": []
 }
 
 {
@@ -715,7 +707,7 @@
   },
   "createdAt": "2024-09-29T13:46:27.810565",
   "createdBy": null,
-  "lastUpdatedAt": "2024-11-25T10:58:31.181442",
+  "lastUpdatedAt": "2024-10-03T11:33:52.637705",
   "optional_category": [],
   "description": "Check if any other view is having different scale than that of base view, if so view heading in drawing area has any one of the following values : 1:1, 1:2, 1:5, 1:10, 1:20, 1:50, 2:1. 5:1, 10:1",
   "verifyStatus": true,
@@ -733,156 +725,283 @@
   "functionList": [
     {
       "name": "GetDrawingDocument",
-      "id": "result0"
+      "id": "result1"
     },
     {
       "name": "GetActiveSheet",
+      "params": [
+        "result1"
+      ],
+      "id": "result2"
+    },
+    {
+      "name": "GetScaleInTitleBlock",
+      "params": [
+        "result1"
+      ],
+      "id": "result3"
+    },
+    {
+      "name": "ValidateStringInStandardList",
+      "params": [
+        "result3",
+        [
+          "1:1",
+          "1:2",
+          "1:5",
+          "1:10",
+          "1:20",
+          "1:50",
+          "2:1",
+          "5:1",
+          "10:1"
+        ]
+      ],
+      "id": "result4"
+    },
+    {
+      "name": "GetDrawingViews",
+      "params": [
+        "result2"
+      ],
+      "id": "result5"
+    },
+    {
+      "name": "CheckDrawingViewScales",
+      "params": [
+        [
+          "1:1",
+          "1:2",
+          "1:5",
+          "1:10",
+          "1:20",
+          "1:50",
+          "1:100",
+          "2:1",
+          "5:1",
+          "10:1"
+        ],
+        "result5"
+      ],
+      "id": "result6"
+    },
+    {
+      "name": "CombineIdentifierAndViews",
+      "params": [
+        "result3",
+        "result5"
+      ],
+      "id": "result7"
+    },
+    {
+      "name": "CombineIdentifierAndViewsStatus",
+      "params": [
+        "result4",
+        "result6"
+      ],
+      "id": "result8"
+    },
+    {
+      "name": "GetRuleStatus",
+      "params": [
+        "result8",
+        "AND"
+      ],
+      "id": "result9"
+    },
+    {
+      "name": "MergeEntityStatus",
+      "params": [
+        "result7",
+        "result8"
+      ],
+      "id": "result10"
+    }
+  ],
+  "testedFileList": [],
+  "optional": [
+    "Flexible"
+  ]
+}
+
+{
+  "_id": {
+    "$oid": "66e4252eceb8e62900769847"
+  },
+  "id": "7wH1yM",
+  "name": "Is relevant scale mentioned to the views which are different than main scale",
+  "category": {
+    "division": [
+      "OFA"
+    ],
+    "pc": [
+      "PNB"
+    ],
+    "software": [
+      "Inventor"
+    ],
+    "componentDesign": [
+      "2D Drawing"
+    ],
+    "subCategory": [
+      "GA Drawing",
+      "Frame 2D Drawing",
+      "Piping 2D Drawing"
+    ]
+  },
+  "createdAt": "2024-09-13T11:42:38.629939",
+  "createdBy": null,
+  "lastUpdatedAt": "2024-09-28T11:15:58.792354",
+  "optional_category": [],
+  "description": "Check Purpose:\nTo check whether view scale (scale of view properties) is as per standard or not. ​\n\nPass Condition​:\nIf views are having scale among (1:1, 1:2, 1:5, 1:10, 1:20, 1:50, 1:100, 2:1, 5:1, 10:1)​\n\nFail Condition​:\nIf any of the above-mentioned pass condition is not matched",
+  "verifyStatus": true,
+  "logicalSteps": [
+    "Get the drawing document",
+    "Get the active sheet",
+    "Get the sketch symbols",
+    "Get the texts from sketch symbols",
+    "Compare to list elements",
+    "Combine object status",
+    "Get rule status"
+  ],
+  "functionList": [
+    {
+      "name": "GetDrawingDocument",
+      "id": "result1"
+    },
+    {
+      "name": "GetActiveSheet",
+      "params": [
+        "result1"
+      ],
+      "id": "result2"
+    },
+    {
+      "name": "GetDrawingViews",
+      "params": [
+        "result2"
+      ],
+      "id": "result3"
+    },
+    {
+      "name": "CheckDrawingViewScales",
+      "params": [
+        [
+          "1:1",
+          "1:2",
+          "1:5",
+          "1:10",
+          "1:20",
+          "1:50",
+          "1:100",
+          "2:1",
+          "5:1",
+          "10:1"
+        ],
+        "result3"
+      ],
+      "id": "result4"
+    },
+    {
+      "name": "GetRuleStatus",
+      "params": [
+        "result4",
+        "OR"
+      ],
+      "id": "result5"
+    },
+    {
+      "name": "MergeEntityStatus",
+      "params": [
+        "result3",
+        "result4"
+      ],
+      "id": "result7"
+    }
+  ],
+  "testedFileList": []
+}
+
+{
+  "_id": {
+    "$oid": "66f6b6ce81e9764face126bd"
+  },
+  "id": "87QdIF",
+  "name": "Is standard 2D template used to create the drawing ​",
+  "category": {
+    "division": [
+      "OFA"
+    ],
+    "pc": [
+      "PNB"
+    ],
+    "software": [
+      "Inventor"
+    ],
+    "componentDesign": [
+      "2D Drawing"
+    ],
+    "subCategory": [
+      "GA Drawing"
+    ]
+  },
+  "createdAt": "2024-09-27T13:44:46.113309",
+  "createdBy": null,
+  "lastUpdatedAt": "2024-09-27T13:44:46.113309",
+  "optional_category": [],
+  "description": "Rule passed when Atlas Copco template is used.",
+  "verifyStatus": true,
+  "logicalSteps": [
+    "Open the 2D drawing in Autodesk Inventor.",
+    "Navigate to the 'Manage' tab on the ribbon.",
+    "Select 'Styles and Standards Editor' from the 'Styles and Standards' panel.",
+    "In the 'Styles and Standards Editor' dialog, check the 'Standard' dropdown menu.",
+    "Verify that the 'Atlas Copco' template is selected.",
+    "If the 'Atlas Copco' template is selected, confirm the rule passes.",
+    "If a different template is selected, confirm the rule fails.",
+    "Document the result of the check (Pass or Fail)."
+  ],
+  "functionList": [
+    {
+      "name": "GetDrawingDocument",
+      "params": [],
+      "id": "result0"
+    },
+    {
+      "name": "GetTemplatesListUsedInDrawing",
       "params": [
         "result0"
       ],
       "id": "result1"
     },
     {
-      "name": "GetSketchSymbols",
+      "name": "VerifyItemsInList",
       "params": [
-        "result1",
         [
-          "AUTOSCALE"
-        ]
+          "AC_enov20160101"
+        ],
+        "result1"
       ],
       "id": "result2"
     },
     {
-      "name": "GetTextFromSketchSymbols",
+      "name": "GetRuleStatus",
       "params": [
         "result2",
-        []
+        "OR"
       ],
       "id": "result3"
     },
     {
-      "name": "RemoveSpacesFromStrings",
+      "name": "CombineObjectStatus",
       "params": [
-        "result3"
+        "result1",
+        "result2"
       ],
       "id": "result4"
-    },
-    {
-      "name": "VerifyItemsInList",
-      "params": [
-        [
-          "1:1",
-          "1:2",
-          "1:5",
-          "1:10",
-          "1:20",
-          "1:50",
-          "2:1",
-          "5:1",
-          "10:1"
-        ],
-        "result4"
-      ],
-      "id": "result5"
-    },
-    {
-      "name": "GetDrawingViews",
-      "params": [
-        "result1"
-      ],
-      "id": "result6"
-    },
-    {
-      "name": "GetDrawingViewScalesList",
-      "params": [
-        "result6"
-      ],
-      "id": "result7"
-    },
-    {
-      "name": "VerifyItemsInList",
-      "params": [
-        [
-          "1:1",
-          "1:2",
-          "1:5",
-          "1:10",
-          "1:20",
-          "1:50",
-          "2:1",
-          "5:1",
-          "10:1"
-        ],
-        "result7"
-      ],
-      "id": "result8"
-    },
-    {
-      "name": "VerifyItemsNotInList",
-      "params": [
-        "result7",
-        "result4"
-      ],
-      "id": "result9"
-    },
-    {
-      "name": "MergeList",
-      "params": [
-        "result5",
-        "result9"
-      ],
-      "id": "result10"
-    },
-    {
-      "name": "GetRuleStatus",
-      "params": [
-        "result10",
-        "AND"
-      ],
-      "id": "result11"
-    },
-    {
-      "name": "CombineIdentifierAndViews",
-      "params": [
-        "result4",
-        "result6"
-      ],
-      "id": "result12"
-    },
-    {
-      "name": "CombineIdentifierAndViewsStatus",
-      "params": [
-        "result11",
-        "result8"
-      ],
-      "id": "result13"
-    },
-    {
-      "name": "GetRuleStatus",
-      "params": [
-        "result13",
-        "AND"
-      ],
-      "id": "result14"
-    },
-    {
-      "name": "MergeEntityStatus",
-      "params": [
-        "result12",
-        "result13"
-      ],
-      "id": "result15"
     }
   ],
-  "testedFileList": [],
-  "optional": [
-    "Flexible"
-  ],
-  "report": {
-    "passcount": 8,
-    "failcount": 10
-  },
-  "srno": 76
+  "testedFileList": []
 }
 
 {
@@ -986,8 +1105,7 @@
       "id": "result7"
     }
   ],
-  "testedFileList": [],
-  "srno": 74
+  "testedFileList": []
 }
 
 {
@@ -1015,7 +1133,7 @@
   },
   "createdAt": "2024-09-19T10:07:13.202546",
   "createdBy": null,
-  "lastUpdatedAt": "2024-11-25T10:26:18.829612",
+  "lastUpdatedAt": "2024-09-28T11:22:08.896288",
   "optional_category": [],
   "description": "For 13 or 14 digit, 10 numeric characters and “-” with trailing 12th alphanumeric character and 13th or 14th digit as numeric again.​ Correct part numbers:  1903001122-01, 1830045236-M1​.",
   "verifyStatus": true,
@@ -1057,12 +1175,7 @@
       "id": "result4"
     }
   ],
-  "testedFileList": [],
-  "report": {
-    "passcount": 0,
-    "failcount": 7
-  },
-  "srno": 34
+  "testedFileList": []
 }
 
 {
@@ -1086,8 +1199,7 @@
       "UTY",
       "TRD",
       "ITJ",
-      "PNB",
-      "APF"
+      "PNB"
     ],
     "software": [
       "Inventor"
@@ -1115,7 +1227,7 @@
   },
   "createdAt": "2024-09-13T06:37:37.950643",
   "createdBy": null,
-  "lastUpdatedAt": "2024-11-25T10:26:19.646915",
+  "lastUpdatedAt": "2024-09-27T13:21:59.187761",
   "optional_category": [],
   "description": "If drawing  have a material assigned in title block in 10digit number. ​\n\nIf drawing have a material assigned in title block as “ See drawing” & material information added in notes in drawing.​\n\nIf in part list material assigned in 10digit number or  “See drawing” or “See Standard”.​",
   "verifyStatus": true,
@@ -1132,147 +1244,73 @@
     {
       "name": "GetDrawingDocument",
       "params": [],
-      "id": "result0"
+      "id": "result1"
     },
     {
       "name": "GetActiveSheet",
       "params": [
-        "result0"
-      ],
-      "id": "result1"
-    },
-    {
-      "name": "GetRequiredIPropertyInTitleBlock",
-      "params": [
-        "result0",
-        "Material"
-      ],
-      "id": "result2"
-    },
-    {
-      "name": "ValidateMaterialLength",
-      "params": [
-        "result2",
-        "10"
+        "result1"
       ],
       "id": "result3"
     },
     {
-      "name": "ValidateString",
+      "name": "GetDrawingNotes",
       "params": [
-        "result2",
-        "See Drawing"
+        "result3"
       ],
       "id": "result4"
     },
     {
-      "name": "GetDrawingNotes",
+      "name": "GetDrawingNoteText",
       "params": [
-        "result1"
+        "result4"
       ],
       "id": "result5"
     },
     {
-      "name": "GetDrawingNoteText",
+      "name": "GetRequiredIPropertyInTitleBlock",
       "params": [
-        "result5"
+        "result1",
+        "Material"
       ],
       "id": "result6"
     },
     {
-      "name": "CompareListToListSubset",
+      "name": "ValidateMaterialLength",
       "params": [
-        [
-          "Material",
-          "material"
-        ],
         "result6",
-        "OR"
-      ],
-      "id": "result7"
-    },
-    {
-      "name": "GetRuleStatus",
-      "params": [
-        "result7",
-        "OR"
+        "10"
       ],
       "id": "result8"
     },
     {
-      "name": "CombineStatus",
+      "name": "CheckMaterialInNotes",
       "params": [
-        "result4",
+        "result6",
+        "result5",
         "result8"
       ],
       "id": "result9"
     },
     {
-      "name": "GetRuleStatus",
+      "name": "CheckMaterialInPartList",
       "params": [
-        "result9",
-        "AND"
+        "result3",
+        "result6",
+        "result9"
       ],
       "id": "result10"
     },
     {
-      "name": "GetColumnDataFromPartList",
-      "params": [
-        "result1",
-        "Material"
-      ],
-      "id": "result11"
-    },
-    {
-      "name": "CheckMaterialInPartList",
-      "params": [
-        "result11"
-      ],
-      "id": "result12"
-    },
-    {
-      "name": "GetRuleStatus",
-      "params": [
-        "result12",
-        "AND"
-      ],
-      "id": "result13"
-    },
-    {
-      "name": "CombineStatus",
-      "params": [
-        "result3",
-        "result10",
-        "result13"
-      ],
-      "id": "result14"
-    },
-    {
-      "name": "GetRuleStatus",
-      "params": [
-        "result14",
-        "OR"
-      ],
-      "id": "result15"
-    },
-    {
       "name": "CombineObjectStatus",
       "params": [
-        "result1",
-        "result15"
+        "result3",
+        "result10"
       ],
-      "id": "result16"
+      "id": "result11"
     }
   ],
-  "testedFileList": [],
-  "report": {
-    "passcount": 1,
-    "failcount": 18
-  },
-  "optional": [
-    "Welded Piping"
-  ],
-  "srno": 12
+  "testedFileList": []
 }
 
 {
@@ -1315,7 +1353,7 @@
   },
   "createdAt": "2024-09-13T07:29:09.995413",
   "createdBy": null,
-  "lastUpdatedAt": "2024-11-25T10:26:19.793894",
+  "lastUpdatedAt": "2024-09-27T13:23:24.707853",
   "optional_category": [],
   "description": "If a material comment is added, T for thickness, Ø for diameter in the part list comments column.​\n\nIf T=xx added in the title block in the material extra description​.",
   "verifyStatus": true,
@@ -1355,7 +1393,7 @@
         "result2",
         [
           "T=",
-          "Ø"
+          "Ø="
         ]
       ],
       "id": "result3"
@@ -1367,7 +1405,7 @@
         "result3",
         [
           "T=",
-          "Ø"
+          "Ø="
         ]
       ],
       "id": "result4"
@@ -1381,12 +1419,7 @@
       "id": "result5"
     }
   ],
-  "testedFileList": [],
-  "report": {
-    "passcount": 1,
-    "failcount": 19
-  },
-  "srno": 13
+  "testedFileList": []
 }
 
 {
@@ -1410,8 +1443,7 @@
       "UTY",
       "TRD",
       "ITJ",
-      "PNB",
-      "APF"
+      "PNB"
     ],
     "software": [
       "Inventor"
@@ -1438,7 +1470,7 @@
   },
   "createdAt": "2024-09-11T06:16:21.860945",
   "createdBy": null,
-  "lastUpdatedAt": "2024-11-25T10:26:19.890481",
+  "lastUpdatedAt": "2024-09-27T13:24:58.245389",
   "optional_category": [],
   "description": "If drawing has a treatment assigned in title block as 10 digit number​.\nIf Treatment is mentioned in the text in the treatment column in the title block.​\nIf the drawing has a treatment assigned in the title block as “ See drawing” & treatment added in notes in the drawing.​\nIf in the treatment table, the treatment is mentioned in 10digit or RAL number",
   "verifyStatus": true,
@@ -1498,16 +1530,7 @@
       "params": [
         "result4",
         "result3",
-        "result5",
-        [
-          "Treatment",
-          "treatment",
-          "RAL",
-          "Color",
-          "Colour",
-          "color",
-          "colour"
-        ]
+        "result5"
       ],
       "id": "result6"
     },
@@ -1520,15 +1543,7 @@
       "id": "result7"
     }
   ],
-  "testedFileList": [],
-  "report": {
-    "passcount": 3,
-    "failcount": 11
-  },
-  "optional": [
-    "Welded Piping"
-  ],
-  "srno": 6
+  "testedFileList": []
 }
 
 {
@@ -1566,7 +1581,7 @@
   },
   "createdAt": "2024-09-11T06:23:04.418092",
   "createdBy": null,
-  "lastUpdatedAt": "2024-11-25T10:26:20.132433",
+  "lastUpdatedAt": "2024-09-27T13:30:41.321607",
   "optional_category": [],
   "description": "If treatment is mentioned as “See Drawing” in the title block. For the drawing where the part list is given on drawing with R/S column has values as R & S only​",
   "verifyStatus": true,
@@ -1647,12 +1662,7 @@
       "id": "result7"
     }
   ],
-  "testedFileList": [],
-  "report": {
-    "passcount": 6,
-    "failcount": 1
-  },
-  "srno": 7
+  "testedFileList": []
 }
 
 {
@@ -1692,7 +1702,7 @@
   },
   "createdAt": "2024-10-16T06:08:33.695752",
   "createdBy": null,
-  "lastUpdatedAt": "2024-11-22T12:09:07.632434",
+  "lastUpdatedAt": "2024-10-16T06:08:33.695752",
   "optional": [
     "Welded Piping"
   ],
@@ -1715,54 +1725,42 @@
       "id": "result0"
     },
     {
-      "name": "GetActiveSheet",
+      "name": "GetRequiredIPropertiesInTitleBlock",
       "params": [
-        "result0"
+        "result0",
+        [
+          "Version Dwg",
+          "Transferred From",
+          "Company"
+        ]
       ],
       "id": "result1"
     },
     {
-      "name": "GetListFromList",
+      "name": "CheckListNotNull",
       "params": [
-        [
-          "Version Drwg",
-          "Owning Unit",
-          "Transferred from"
-        ]
+        "result1"
       ],
       "id": "result2"
     },
     {
-      "name": "CheckTextboxesInTitleBlock ",
+      "name": "GetRuleStatus",
       "params": [
-        "result1",
-        "result2"
+        "result2",
+        "AND"
       ],
       "id": "result3"
     },
     {
-      "name": "GetRuleStatus",
-      "params": [
-        "result3",
-        "AND"
-      ],
-      "id": "result4"
-    },
-    {
       "name": "CombineObjectStatus",
       "params": [
-        "result2",
-        "result3"
+        "result1",
+        "result2"
       ],
-      "id": "result5"
+      "id": "result4"
     }
   ],
-  "testedFileList": [],
-  "report": {
-    "passcount": 4,
-    "failcount": 13
-  },
-  "srno": 99
+  "testedFileList": []
 }
 
 {
@@ -1814,7 +1812,7 @@
   },
   "createdAt": "2024-09-11T06:28:45.041329",
   "createdBy": "Jayesh Patil",
-  "lastUpdatedAt": "2024-11-25T11:03:51.309976",
+  "lastUpdatedAt": "2024-09-27T13:43:58.643302",
   "optional_category": [],
   "description": "If the standard scale is used for all main, section, detail, and projected views.​\nIf the standard scale is used for the main sheet in the title block.",
   "verifyStatus": true,
@@ -1830,43 +1828,26 @@
   "functionList": [
     {
       "name": "GetDrawingDocument",
-      "id": "result0"
+      "id": "result1"
     },
     {
       "name": "GetActiveSheet",
       "params": [
-        "result0"
-      ],
-      "id": "result1"
-    },
-    {
-      "name": "GetSketchSymbols",
-      "params": [
-        "result1",
-        [
-          "AUTOSCALE"
-        ]
+        "result1"
       ],
       "id": "result2"
     },
     {
-      "name": "GetTextFromSketchSymbols",
+      "name": "GetScaleInTitleBlock",
       "params": [
-        "result2",
-        []
+        "result1"
       ],
       "id": "result3"
     },
     {
-      "name": "RemoveSpacesFromStrings",
+      "name": "ValidateStringInStandardList",
       "params": [
-        "result3"
-      ],
-      "id": "result4"
-    },
-    {
-      "name": "VerifyItemsInList",
-      "params": [
+        "result3",
         [
           "1:1",
           "1:2",
@@ -1877,17 +1858,16 @@
           "2:1",
           "5:1",
           "10:1"
-        ],
-        "result4"
+        ]
       ],
-      "id": "result5"
+      "id": "result4"
     },
     {
       "name": "GetDrawingViews",
       "params": [
-        "result1"
+        "result2"
       ],
-      "id": "result6"
+      "id": "result5"
     },
     {
       "name": "CheckDrawingViewScales",
@@ -1904,166 +1884,12 @@
           "5:1",
           "10:1"
         ],
-        "result6"
-      ],
-      "id": "result7"
-    },
-    {
-      "name": "CombineIdentifierAndViews",
-      "params": [
-        "result4",
-        "result6"
-      ],
-      "id": "result8"
-    },
-    {
-      "name": "CombineIdentifierAndViewsStatus",
-      "params": [
-        "result5",
-        "result7"
-      ],
-      "id": "result9"
-    },
-    {
-      "name": "GetRuleStatus",
-      "params": [
-        "result9",
-        "AND"
-      ],
-      "id": "result10"
-    },
-    {
-      "name": "MergeEntityStatus",
-      "params": [
-        "result8",
-        "result9"
-      ],
-      "id": "result11"
-    }
-  ],
-  "testedFileList": [],
-  "report": {
-    "passcount": 5,
-    "failcount": 16
-  },
-  "srno": 8
-}
-
-{
-  "_id": {
-    "$oid": "66e14b77c1f02cad726b8fb0"
-  },
-  "id": "RSn0W1",
-  "name": "M-35 -  Check document name and numbering according to 10 digit number​",
-  "category": {
-    "division": [
-      "OFA",
-      "IAT"
-    ],
-    "pc": [
-      "BQR",
-      "API",
-      "WUX",
-      "COX",
-      "PNE",
-      "FRJ",
-      "UTY",
-      "TRD",
-      "ITJ",
-      "PNB",
-      "APF"
-    ],
-    "software": [
-      "Inventor"
-    ],
-    "componentDesign": [
-      "2D Drawing"
-    ],
-    "subCategory": [
-      "Welded Piping",
-      "Piping Other",
-      "Hose",
-      "Flexible",
-      "Sheet Metal Drawing",
-      "Ferrous Casting Drawing",
-      "Non-Ferrous Casting Drawing",
-      "Casted Machined Drawing",
-      "Non-Casted Machined Drawing",
-      "Foam",
-      "Decal",
-      "Supplier Drawing",
-      "Instruction Drawing",
-      "Dimension Drawing"
-    ]
-  },
-  "createdAt": "2024-09-11T07:49:11.119818",
-  "createdBy": null,
-  "lastUpdatedAt": "2024-11-25T10:26:21.937457",
-  "optional_category": [],
-  "description": "If drawing  have a 10digit number. XXXXXXXXXX​.\nIF prefix or suffix with letters not given in 10 digit number or make it 10 digit number​.\nIf no -01 given to 10 digit number​.",
-  "verifyStatus": true,
-  "logicalSteps": [
-    "Get the drawing document",
-    "Get the active sheet",
-    "Get the sketch symbols",
-    "Get the texts from sketch symbols",
-    "Compare to list elements",
-    "Combine object status",
-    "Get rule status"
-  ],
-  "functionList": [
-    {
-      "name": "GetDrawingDocument",
-      "params": [],
-      "id": "result0"
-    },
-    {
-      "name": "GetActiveSheet",
-      "params": [
-        "result0"
-      ],
-      "id": "result1"
-    },
-    {
-      "name": "GetPhysicalFileName",
-      "params": [
-        "result0"
-      ],
-      "id": "result2"
-    },
-    {
-      "name": "ValidatePhysicalFileName",
-      "params": [
-        "result2"
-      ],
-      "id": "result3"
-    },
-    {
-      "name": "GetIPropertyValueFromTitleBlock",
-      "params": [
-        "result1",
-        "PART NUMBER"
-      ],
-      "id": "result4"
-    },
-    {
-      "name": "ValidatePartNumber",
-      "params": [
-        "result2",
-        "result4"
-      ],
-      "id": "result5"
-    },
-    {
-      "name": "MergeStrings",
-      "params": [
-        "result2",
-        "result4"
+        "result5"
       ],
       "id": "result6"
     },
     {
-      "name": "MergeBools",
+      "name": "CombineIdentifierAndViews",
       "params": [
         "result3",
         "result5"
@@ -2071,31 +1897,31 @@
       "id": "result7"
     },
     {
-      "name": "GetRuleStatus",
+      "name": "CombineIdentifierAndViewsStatus",
       "params": [
-        "result7",
-        "AND"
+        "result4",
+        "result6"
       ],
       "id": "result8"
     },
     {
-      "name": "CombineObjectStatus",
+      "name": "GetRuleStatus",
       "params": [
-        "result6",
-        "result7"
+        "result8",
+        "AND"
       ],
       "id": "result9"
+    },
+    {
+      "name": "MergeEntityStatus",
+      "params": [
+        "result7",
+        "result8"
+      ],
+      "id": "result10"
     }
   ],
-  "testedFileList": [],
-  "report": {
-    "passcount": 5,
-    "failcount": 15
-  },
-  "optional": [
-    "Welded Piping"
-  ],
-  "srno": 9
+  "testedFileList": []
 }
 
 {
@@ -2145,7 +1971,7 @@
   },
   "createdAt": "2024-09-12T07:10:38.096680",
   "createdBy": null,
-  "lastUpdatedAt": "2024-11-25T10:26:22.153196",
+  "lastUpdatedAt": "2024-09-27T13:37:24.053361",
   "optional_category": [],
   "description": "Checking drawing  have a confidentiality class \"Confidential\" is mentioned in title block.​",
   "verifyStatus": true,
@@ -2189,13 +2015,9 @@
       "id": "result5"
     }
   ],
-  "testedFileList": [],
-  "report": {
-    "passcount": 7,
-    "failcount": 0
-  },
-  "srno": 10
+  "testedFileList": []
 }
+
 
 {
   "_id": {
@@ -2233,7 +2055,7 @@
   },
   "createdAt": "2024-09-12T07:16:25.565337",
   "createdBy": null,
-  "lastUpdatedAt": "2024-11-25T10:26:22.253019",
+  "lastUpdatedAt": "2024-09-27T13:39:11.167286",
   "optional_category": [],
   "description": "Checking the drawing has a confidentiality class “Internal” is mentioned in the title block.​",
   "verifyStatus": true,
@@ -2277,12 +2099,7 @@
       "id": "result5"
     }
   ],
-  "testedFileList": [],
-  "report": {
-    "passcount": 0,
-    "failcount": 7
-  },
-  "srno": 11
+  "testedFileList": []
 }
 
 {
@@ -2328,7 +2145,7 @@
   },
   "createdAt": "2024-09-13T09:10:04.981732",
   "createdBy": null,
-  "lastUpdatedAt": "2024-11-25T10:26:23.225654",
+  "lastUpdatedAt": "2024-09-27T13:53:14.371824",
   "optional_category": [],
   "description": "Checking \"R/S\" column is given in part list and the \"R/S\" marking is correctly mentioned",
   "verifyStatus": true,
@@ -2391,12 +2208,7 @@
       "id": "result6"
     }
   ],
-  "testedFileList": [],
-  "report": {
-    "passcount": 14,
-    "failcount": 1
-  },
-  "srno": 16
+  "testedFileList": []
 }
 
 {
@@ -2442,7 +2254,7 @@
   },
   "createdAt": "2024-09-13T09:32:05.683818",
   "createdBy": null,
-  "lastUpdatedAt": "2024-11-25T10:26:23.325001",
+  "lastUpdatedAt": "2024-09-27T13:54:13.927940",
   "optional_category": [],
   "description": "If any part number in the part list is Standard part, then in the Material column the material is mentioned as “see standards”​",
   "verifyStatus": true,
@@ -2485,12 +2297,12 @@
       "id": "result4"
     },
     {
-      "name": "ValidateStandardPartsInPartList",
+      "name": "CheckStdPartsInPartList",
       "params": [
         "result3",
-        "S",
+		"S",
         "result4",
-        "See standards"
+		"See standard"
       ],
       "id": "result5"
     },
@@ -2505,18 +2317,13 @@
     {
       "name": "CombineObjectStatus",
       "params": [
-        "result3",
+        "result4",
         "result5"
       ],
       "id": "result7"
     }
   ],
-  "testedFileList": [],
-  "report": {
-    "passcount": 4,
-    "failcount": 9
-  },
-  "srno": 18
+  "testedFileList": []
 }
 
 {
@@ -2560,7 +2367,7 @@
   },
   "createdAt": "2024-09-13T10:21:36.995786",
   "createdBy": null,
-  "lastUpdatedAt": "2024-11-25T11:06:50.506805",
+  "lastUpdatedAt": "2024-09-27T13:57:39.356365",
   "optional_category": [],
   "description": "If Part numbers and Qty are not manually overwritten​",
   "verifyStatus": true,
@@ -2577,86 +2384,64 @@
     {
       "name": "GetDrawingDocument",
       "params": [],
-      "id": "result0"
+      "id": "result1"
     },
     {
       "name": "GetActiveSheet",
       "params": [
-        "result0"
-      ],
-      "id": "result1"
-    },
-    {
-      "name": "GetColumnDataFromPartList",
-      "params": [
-        "result1",
-        "Partnumber"
+        "result1"
       ],
       "id": "result2"
     },
     {
       "name": "GetColumnDataFromPartList",
       "params": [
-        "result1",
-        "Qty"
+        "result2",
+        "Material"
       ],
       "id": "result3"
     },
     {
-      "name": "MergeList",
+      "name": "GetColumnDataFromPartList",
       "params": [
         "result2",
-        "result3"
+        "Qty"
       ],
       "id": "result4"
     },
     {
-      "name": "CheckValuesNotManuallyUpdated",
+      "name": "MergeList",
       "params": [
-        "result1",
-        "Partnumber"
+        "result3",
+        "result4"
       ],
       "id": "result5"
     },
     {
-      "name": "CheckValuesNotManuallyUpdated",
+      "name": "CheckListNotNull",
       "params": [
-        "result1",
-        "Qty"
+        "result5"
       ],
       "id": "result6"
     },
     {
-      "name": "MergeList",
+      "name": "GetRuleStatus",
       "params": [
-        "result5",
-        "result6"
+        "result6",
+        "AND"
       ],
       "id": "result7"
     },
     {
-      "name": "GetRuleStatus",
-      "params": [
-        "result7",
-        "AND"
-      ],
-      "id": "result8"
-    },
-    {
       "name": "CombineObjectStatus",
       "params": [
-        "result4",
-        "result7"
+        "result5",
+        "result6"
       ],
-      "id": "result9"
+      "id": "result8"
     }
   ],
-  "testedFileList": [],
-  "report": {
-    "passcount": 2,
-    "failcount": 9
-  },
-  "srno": 24
+  "testedFileList": []
 }
 
 {
@@ -2680,8 +2465,7 @@
       "UTY",
       "TRD",
       "ITJ",
-      "PNB",
-      "APF"
+      "PNB"
     ],
     "software": [
       "Inventor"
@@ -2705,7 +2489,7 @@
   },
   "createdAt": "2024-09-24T07:12:54.849095",
   "createdBy": null,
-  "lastUpdatedAt": "2024-11-25T11:10:29.987332",
+  "lastUpdatedAt": "2024-09-27T13:51:37.561948",
   "optional_category": [],
   "description": "Pass Condition: If drawing is made for Item which is defined by only “-” in “R/S” in Parameter manager/ENOVIA.​\nIf details of item added on drawing which is defined by only  “-” in “R/S” in Part list.​\nFail Condition:\nIf drawing is made for Item which is defined by only “S” in “R/S” in Parameter manager.​\nIf details of item added on drawing which is defined by only  “S” in “R/S” in Part list.​",
   "verifyStatus": true,
@@ -2722,40 +2506,51 @@
     {
       "name": "GetDrawingDocument",
       "params": [],
-      "id": "result0"
+      "id": "result1"
     },
     {
       "name": "GetActiveSheet",
       "params": [
-        "result0"
-      ],
-      "id": "result1"
-    },
-    {
-      "name": "CheckStandardPartPopUp",
-      "params": [
-        "Is Standard part present in the drawing?"
+        "result1"
       ],
       "id": "result2"
     },
     {
-      "name": "CombineObjectStatus",
+      "name": "GetColumnDataFromPartList",
       "params": [
-        "result1",
-        "result2"
+        "result2",
+        "R/S"
       ],
       "id": "result3"
+    },
+    {
+      "name": "VerifyItemsInList",
+      "params": [
+        [
+          "-"
+        ],
+        "result3"
+      ],
+      "id": "result4"
+    },
+    {
+      "name": "GetRuleStatus",
+      "params": [
+        "result4",
+        "AND"
+      ],
+      "id": "result5"
+    },
+    {
+      "name": "CombineObjectStatus",
+      "params": [
+        "result3",
+        "result4"
+      ],
+      "id": "result6"
     }
   ],
-  "testedFileList": [],
-  "report": {
-    "passcount": 8,
-    "failcount": 14
-  },
-  "optional": [
-    "Welded Piping"
-  ],
-  "srno": 40
+  "testedFileList": []
 }
 
 {
@@ -2805,7 +2600,7 @@
   },
   "createdAt": "2024-09-10T14:23:21.267605",
   "createdBy": null,
-  "lastUpdatedAt": "2024-11-25T10:26:24.083189",
+  "lastUpdatedAt": "2024-09-27T13:54:09.964012",
   "optional_category": [],
   "description": "Ensure correct weight is shown in drawing.",
   "verifyStatus": true,
@@ -2825,16 +2620,9 @@
       "id": "result0"
     },
     {
-      "name": "GetActiveSheet",
+      "name": "GetRequiredIPropertyInTitleBlock",
       "params": [
-        "result0"
-      ],
-      "id": "result1"
-    },
-    {
-      "name": "GetIPropertyValueFromTitleBlock",
-      "params": [
-        "result1",
+        "result0",
         "Finished Weight"
       ],
       "id": "result2"
@@ -2855,12 +2643,7 @@
       "id": "result4"
     }
   ],
-  "testedFileList": [],
-  "report": {
-    "passcount": 4,
-    "failcount": 6
-  },
-  "srno": 5
+  "testedFileList": []
 }
 
 {
@@ -2912,7 +2695,7 @@
   },
   "createdAt": "2024-09-13T09:59:57.905004",
   "createdBy": null,
-  "lastUpdatedAt": "2024-11-25T10:26:24.513070",
+  "lastUpdatedAt": "2024-09-28T07:09:42.353598",
   "optional_category": [],
   "description": "Replace number or compare number should be is there in title block.​",
   "verifyStatus": true,
@@ -2966,12 +2749,7 @@
       "id": "result5"
     }
   ],
-  "testedFileList": [],
-  "report": {
-    "passcount": 0,
-    "failcount": 11
-  },
-  "srno": 23
+  "testedFileList": []
 }
 
 {
@@ -3016,7 +2794,7 @@
   },
   "createdAt": "2024-09-28T09:48:08.770913",
   "createdBy": null,
-  "lastUpdatedAt": "2024-11-25T11:12:05.919795",
+  "lastUpdatedAt": "2024-09-30T11:14:10.931167",
   "optional_category": [],
   "description": "Pass Condition​: If editions are mentioned in the table in the Edition column​. If editions are correctly mentioned in the table as per the rules of tabular drawing​",
   "verifyStatus": true,
@@ -3032,76 +2810,48 @@
     {
       "name": "GetDrawingDocument",
       "params": [],
-      "id": "result0"
+      "id": "result1"
     },
     {
       "name": "GetActiveSheet",
       "params": [
-        "result0"
-      ],
-      "id": "result1"
-    },
-    {
-      "name": "GetColumnDataFromPartList",
-      "params": [
-        "result1",
-        "Edition"
+        "result1"
       ],
       "id": "result2"
     },
     {
-      "name": "CheckListNotNull",
+      "name": "GetColumnDataFromPartList",
       "params": [
-        "result2"
+        "result2",
+        "Edition"
       ],
       "id": "result3"
     },
     {
-      "name": "GetRuleStatus",
+      "name": "CheckListNotNull",
       "params": [
-        "result3",
-        "AND"
+        "result3"
       ],
       "id": "result4"
     },
     {
-      "name": "GetConfirmationPopUp",
+      "name": "GetRuleStatus",
       "params": [
-        "Editions are correctly mentioned in the table?"
+        "result4",
+        "AND"
       ],
       "id": "result5"
     },
     {
-      "name": "MergeBools",
-      "params": [
-        "result4",
-        "result5"
-      ],
-      "id": "result6"
-    },
-    {
-      "name": "GetRuleStatus",
-      "params": [
-        "result6",
-        "AND"
-      ],
-      "id": "result7"
-    },
-    {
       "name": "CombineObjectStatus",
       "params": [
-        "result0",
-        "result7"
+        "result3",
+        "result4"
       ],
-      "id": "result8"
+      "id": "result6"
     }
   ],
-  "testedFileList": [],
-  "report": {
-    "passcount": 0,
-    "failcount": 11
-  },
-  "srno": 71
+  "testedFileList": []
 }
 
 {
@@ -3139,7 +2889,7 @@
   },
   "createdAt": "2024-09-25T12:37:11.610900",
   "createdBy": null,
-  "lastUpdatedAt": "2024-11-25T10:26:24.856006",
+  "lastUpdatedAt": "2024-09-27T14:10:35.932475",
   "optional_category": [],
   "description": "There should not be \"Atlas Copco\" logo in title block for dimension drawing, installation drawing, some instruction drawing or these drawings can have owned brand",
   "verifyStatus": true,
@@ -3173,28 +2923,15 @@
       "id": "result2"
     },
     {
-      "name": "GetConfirmationPopUp",
-      "params": [
-        "result2",
-        "Confirm if document belongs to multibrand?"
-      ],
-      "id": "result3"
-    },
-    {
       "name": "CombineObjectStatus",
       "params": [
         "result1",
-        "result3"
+        "result2"
       ],
       "id": "result4"
     }
   ],
-  "testedFileList": [],
-  "report": {
-    "passcount": 8,
-    "failcount": 5
-  },
-  "srno": 50
+  "testedFileList": []
 }
 
 {
@@ -3233,7 +2970,7 @@
   },
   "createdAt": "2024-09-28T11:41:26.805988",
   "createdBy": null,
-  "lastUpdatedAt": "2024-11-25T10:26:25.570951",
+  "lastUpdatedAt": "2024-09-28T11:41:26.805988",
   "optional_category": [],
   "description": "Pass Condition​ : Modification Text should not be blank​. Revision number should be greater than 1.​ If modification text has “Material” word in it, then the format should be​ \"Material was” followed by ‘AC 10-digit material number’.​",
   "verifyStatus": true,
@@ -3300,11 +3037,5 @@
       "id": "result6"
     }
   ],
-  "testedFileList": [],
-  "report": {
-    "passcount": 0,
-    "failcount": 7
-  },
-  "srno": 72
+  "testedFileList": []
 }
-
